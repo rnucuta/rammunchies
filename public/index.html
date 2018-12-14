@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8"/>
 <style>
 .coloration{
 position: fixed;
@@ -158,11 +159,11 @@ function download2(){
     }
     else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
     {
-         document(document.getElementById('a').value);
+         download(document.getElementById('a').value);
     }
     else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
     {
-         document(document.getElementById('a').value);
+         download(document.getElementById('a').value);
     }  
 }
 
