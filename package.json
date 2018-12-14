@@ -11,5 +11,10 @@
   "license": "ISC",
   "main": "server.js",
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+  
 }
