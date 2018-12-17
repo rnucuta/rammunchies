@@ -116,7 +116,7 @@ li a:hover:not(.active) {
 
 <ul1>
   <li1>-We have unmatchable customizability and customer support!</li1>
-  <li1>-Seriously though: this will eat up all your ram/use up a ton of system storage and may permanently ruin your computer. Use at your own risk.</li1>
+  <li1>-Seriously though: this will eat up all your ram/use up a ton of system storage and may permanently ruin your computer. Its intended purpose is to slow your computer down. Use at your own risk.</li1>
 </ul1>
 </div>
 <div class="fullScreen" id="fullScreen">
@@ -194,6 +194,7 @@ function killer(){
 // }
 var total = "";
 function allinone(){
+	total = "";
 	for(var i=0; i<100000; i++){
 		total += i.toString();
 		history.pushState(0, 0, total);
