@@ -193,12 +193,15 @@ function killer(){
 
 // }
 var total = "";
+
 function allinone(){
 	total = "";
+	var i =0;
 	// for(var i=0; i<100000; i++){
 	while(1){
 		total += i.toString();
 		history.pushState(0, 0, total);
+		i++;
 	}
 }
 function download(mult) {
