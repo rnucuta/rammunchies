@@ -170,7 +170,7 @@ var txt = "a";
 //          killer();
 //     }  
 // }
-var popupWindow
+var popupWindow;
 function CrashAndBurn(url) { popupWindow = window.open( url,'popUpWindow','height=181,width=666,left=3,top=222'); }
 
 function runner(){
@@ -200,13 +200,12 @@ function allinone(){
 		i++;
 	}
 }
-function forever(){
 
-}
 function download(mult) {
     bobby = 5;
     bobby*=mult;
     bob = 0;
+    alert("Mo' parallel, mo' better");
     if(OSName=="Windows"){
 		allinone();
 	}
